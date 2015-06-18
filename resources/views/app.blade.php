@@ -6,7 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Laravel</title>
 
-	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/bloggus.css') }}" rel="stylesheet">
 
 	<!-- Fonts -->
 	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
@@ -28,18 +29,18 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">Laravel</a>
+				<a class="navbar-brand" href="#">BLOGGUS</a>
 			</div>
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li><a href="{{ url('/') }}">Home</a></li>
+					<li><a href="{{ url('/') }}"></a></li>
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
 					@if (Auth::guest())
-						<li><a href="{{ url('/auth/login') }}">Login</a></li>
-						<li><a href="{{ url('/auth/register') }}">Register</a></li>
+						<li><a href="{{ url('login') }}">Se connecter</a></li>
+						<li><a href="{{ url('register') }}">S'enregistrer</a></li>
 					@else
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
@@ -52,11 +53,29 @@
 			</div>
 		</div>
 	</nav>
+        <div class="col-md-3 bloggus-sidebar">
+            <ul class="nav nav-pills nav-stacked">
 
+            <div class="container-fluid">
+                <li><a href="#">Mon profile</a></li>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Gérer mes blogs</a>
+                <ul class="dropdown-menu" role="menu">
+                    <li>Blog1</li>
+                    <li>Blog1</li>
+                    <li>Blog1</li>
+                </ul>
+                <li><a href="#">Messagerie</a></li>
+                <li><a href="#">Mes amis</a></li>
+            </div>
+            </ul>
+        </div>
+    <div class="container">
 	@yield('content')
+    </div>
 
 	<!-- Scripts -->
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="{{ asset('js/front.js') }}"></script>
 </body>
 </html>
