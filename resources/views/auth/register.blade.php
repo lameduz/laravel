@@ -54,6 +54,10 @@
                                 <input type="date" class="form-control" name="birthdate">
                             </div>
                         </div>
+                          <div class="form-group">
+                                                {!! Form::label('Sexe', 'Sexe ', ['class' => 'col-sm-3 control-label']) !!}
+                                                {!! Form::select('sexe',["Homme" => "Homme","Femme" => "Femme"])!!}
+                                            </div>
 
 						<div class="form-group">
 							<div class="col-md-6 col-md-offset-4">

@@ -21,8 +21,8 @@ Route::post('login', ['uses' => 'UsersController@postLogin', 'as' => 'users.post
 
 
 Route::get('profile', ['uses' => 'ProfilesController@getIndex', 'as' => 'profiles.index']);
-Route::get('profile/edit', ['uses' => 'ProfilesController@getEdit', 'as' => 'profiles.edit']);
-Route::post('profile/edit/{id}', ['uses' => 'ProfilesController@postEdit', 'as' => 'profiles.edit']);
+Route::get('profile/edit/{id}', ['uses' => 'ProfilesController@edit', 'as' => 'profiles.edit']);
+Route::post('profile/edit/{id}', ['uses' => 'ProfilesController@update', 'as' => 'profiles.update']);
 Route::get('profile/{id}',['uses' => 'ProfilesController@show','as' => 'profiles.show']);
 
 

@@ -32,9 +32,9 @@ class UsersController extends Controller {
     }
 	public function postRegister(Requests\CreateUserRequest $request)
 	{
-		$user = new User($request->except('birthdate','password'));
+		$user = new User($request->except('birthdate','password','sexe'));
         $user->password = bcrypt($request->input('password'));
-        $profile = new Profile($request->only('birthdate'));
+        $profile = new Profile($request->only('birthdate','sexe'));
         $user->save();
         $user->profile()->save($profile);
 	}

@@ -136,7 +136,7 @@ return [
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
         'Illuminate\Html\HtmlServiceProvider',
-        'Appzcoder\CrudGenerator\CrudGeneratorServiceProvider',
+
 
 		/*
 		 * Application Service Providers...

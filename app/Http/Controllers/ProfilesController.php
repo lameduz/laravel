@@ -4,6 +4,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Profile;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -16,9 +17,10 @@ class ProfilesController extends Controller {
 	 */
 	public function getIndex()
 	{
-        $profile = Profile::find(Auth::user()->id);
+        $user = User::with('profile')->find(Auth::user()->id);
 
-        return view('profiles.index')->with(['profile' => $profile]);
+
+        return view('profiles.index')->with(['user' => $user]);
 	}
 
 	/**
