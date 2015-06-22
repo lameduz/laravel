@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="20533918-81e4-43d9-9acb-0ca85f900a3e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/ajaxupload.js" afterPath="$PROJECT_DIR$/public/js/ajaxupload.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/app.css" afterPath="$PROJECT_DIR$/public/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/bloggus.css" afterPath="$PROJECT_DIR$/public/css/bloggus.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/profiles/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/profiles/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="20533918-81e4-43d9-9acb-0ca85f900a3e" name="Default" comment="" />
     <ignored path="laravel.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
