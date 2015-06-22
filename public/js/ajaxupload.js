@@ -5,6 +5,12 @@ $(document).ready(function()
     var description = $('.profile-description');
     var editBtn = $('.edit-profile-confirm');
 
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+
     form.bind('submit',function(e)
     {
         e.preventDefault();
@@ -27,6 +33,7 @@ $(document).ready(function()
     });
 
 
+
     description.click(function()
     {
         $(this).attr('contenteditable','true');
@@ -34,9 +41,28 @@ $(document).ready(function()
         $('#profile').find('.edit-tools').show();
     });
 
-    description.blur(function(e){
+
+    editBtn.click(function(e){
         $('#profile').find('.edit-tools').hide();
+        var request = $.ajax({
+            url: "profile/edit/desc",
+            type: "post",
+            dataType:'jsonp',
+            data: { desc : description.html() }
+        });
+
+        request.done(function(msg)
+        {
+           console.log(msg);
+        });
+
+
+
+
     });
+
+
+
 
 
 

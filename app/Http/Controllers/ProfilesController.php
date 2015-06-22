@@ -43,6 +43,17 @@ class ProfilesController extends Controller {
 
 
     }
+
+    public function postProfileDescription(Request $request)
+    {
+
+        if($request->ajax())
+        {
+           $profile = Profile::find(Auth::user()->id);
+            $profile->description = $request->only('desc')['desc'];
+            $profile->save();
+        }
+    }
 	/**
 	 * Show the form for creating a new resource.
 	 *

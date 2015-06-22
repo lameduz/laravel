@@ -18,6 +18,7 @@ Route::post('register', ['uses' => 'UsersController@postRegister','as' => 'users
 
 Route::get('login', ['uses' => 'UsersController@getLogin', 'as' => 'users.getlogin']);
 Route::post('login', ['uses' => 'UsersController@postLogin', 'as' => 'users.postlogin']);
+Route::post('profile/edit/desc',['uses' => 'ProfilesController@postProfileDescription','as' => 'profiles.edit.desc']);
 
 
 Route::get('profile', ['uses' => 'ProfilesController@getIndex', 'as' => 'profiles.index']);
@@ -25,7 +26,6 @@ Route::get('profile/edit/{id}', ['uses' => 'ProfilesController@edit', 'as' => 'p
 Route::post('profile/edit/{id}', ['uses' => 'ProfilesController@update', 'as' => 'profiles.update']);
 Route::get('profile/{id}',['uses' => 'ProfilesController@show','as' => 'profiles.show']);
 Route::post('profile/pic/new',['uses' => 'ProfilesController@postProfilePic','as' => 'profiles.new.pic']);
-
 
 Route::controllers([
     'auth' => 'Auth\AuthController',
