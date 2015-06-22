@@ -15,14 +15,15 @@
         </div>
         <p>Proutorut</p>
         <div id="profile">
-        <div class="well well-lg profile-description" >
-           {{$user->profile->description}}
-        </div>
+            <div class="well well-lg profile-description" >
+               {{$user->profile->description}}
+            </div>
 
+            <div class="edit-tools">
+                <button class="edit-profile-confirm">Modifier</button>
+                <meta name="csrf-token" content="{{ csrf_token() }}">
+            </div>
 
-        <div class="edit-tools">
-            <button class="edit-profile-confirm">Modifier</button>
-        </div>
         </div>
     </div>
     <div class="col-md-4">
