@@ -14,6 +14,7 @@ return array(
     'AddProfileTable' => $baseDir . '/database/migrations/2015_06_09_122257_AddProfileTable.php',
     'AddSexeToProfileTable' => $baseDir . '/database/migrations/2015_06_18_214200_AddSexeToProfileTable.php',
     'AddSexeToUsersTable' => $baseDir . '/database/migrations/2015_06_18_213225_AddSexeToUsersTable.php',
+    'ChangeDefaultValueProfile' => $baseDir . '/database/migrations/2015_06_21_113135_ChangeDefaultValueProfile.php',
     'CreateBlogsTable' => $baseDir . '/database/migrations/2015_06_04_211608_create_blogs_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreatePostsTable' => $baseDir . '/database/migrations/2015_06_03_213041_create_posts_table.php',

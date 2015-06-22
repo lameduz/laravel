@@ -55,8 +55,8 @@ return [
 		'mysql' => [
 			'driver'    => 'mysql',
 			'host'      => env('DB_HOST', 'localhost'),
-			'database'  => env('DB_DATABASE', 'bl'),
-			'username'  => env('DB_USERNAME', 'root'),
+			'database'  => env('DB_DATABASE', 'blogcreator'),
+			'username'  => env('DB_USERNAME', 'lmdz'),
 			'password'  => env('DB_PASSWORD', 'kookli12'),
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',

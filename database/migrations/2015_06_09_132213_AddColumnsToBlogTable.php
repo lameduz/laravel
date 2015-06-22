@@ -27,7 +27,7 @@ class AddColumnsToBlogTable extends Migration {
 	{
 		Schema::table('blogs', function(Blueprint $table)
 		{
-			$table->dropColumn('background-image');
+			$table->dropColumn('background');
 		});
 	}
 

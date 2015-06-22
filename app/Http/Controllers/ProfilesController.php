@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Profile;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 
 class ProfilesController extends Controller {
@@ -23,6 +24,25 @@ class ProfilesController extends Controller {
         return view('profiles.index')->with(['user' => $user]);
 	}
 
+
+    public function postProfilePic(Request $requests)
+    {
+        $file = $requests->file('new-profile-pic');
+        $filename = $file->getClientOriginalName();
+        $extension = $file->getClientOriginalExtension();
+        $storageDir = 'storage/';
+        $file->move($storageDir,$filename);
+
+        if($requests->ajax())
+        {
+            $profile = Profile::find(Auth::user()->id);
+            $profile->profilepic = $storageDir.$filename;
+            $profile->save();
+            return response()->json(['file' => $storageDir.$filename]);
+        }
+
+
+    }
 	/**
 	 * Show the form for creating a new resource.
 	 *

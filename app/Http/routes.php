@@ -24,6 +24,7 @@ Route::get('profile', ['uses' => 'ProfilesController@getIndex', 'as' => 'profile
 Route::get('profile/edit/{id}', ['uses' => 'ProfilesController@edit', 'as' => 'profiles.edit']);
 Route::post('profile/edit/{id}', ['uses' => 'ProfilesController@update', 'as' => 'profiles.update']);
 Route::get('profile/{id}',['uses' => 'ProfilesController@show','as' => 'profiles.show']);
+Route::post('profile/pic/new',['uses' => 'ProfilesController@postProfilePic','as' => 'profiles.new.pic']);
 
 
 Route::controllers([
