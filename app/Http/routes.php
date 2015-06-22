@@ -27,6 +27,11 @@ Route::post('profile/edit/{id}', ['uses' => 'ProfilesController@update', 'as' =>
 Route::get('profile/{id}',['uses' => 'ProfilesController@show','as' => 'profiles.show']);
 Route::post('profile/pic/new',['uses' => 'ProfilesController@postProfilePic','as' => 'profiles.new.pic']);
 
+Route::get('blogs', ['uses' => 'BlogsController@index','as' => 'blog.index']);
+Route::get('blog/new',['uses' => 'BlogsController@create','as' => 'blog.new']);
+Route::post('blog/new',['uses' => 'BlogsController@store','as' => 'blog.store']);
+
+
 Route::controllers([
     'auth' => 'Auth\AuthController',
     'password' => 'Auth\PasswordController',

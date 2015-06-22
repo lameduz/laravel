@@ -28,7 +28,7 @@
 						<span class="icon-bar"></span>
 					</button>
 					<a class="navbar-brand" href="/">
-						<img src="img/bloggus_logo_small.png" alt="bloggus logo">
+						<img src="{{asset('img/bloggus_logo_small.png')}}" alt="bloggus logo">
 					</a>
 				</div>
 
@@ -45,8 +45,8 @@
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->username }}<span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
-								<li><a href="/profile">Mon profil</a></li>
-								<li><a href="#">Gérer mes blogs</a></li>
+								<li><a href="{{route('profiles.index')}}">Mon profil</a></li>
+								<li><a href="{{route('blog.index')}}">Gérer mes blogs</a></li>
 								<!-- <ul class="dropdown-menu" role="menu">
 									<li>Blog1</li>
 									<li>Blog1</li>
@@ -64,14 +64,7 @@
 				</div>
 			</div>
 		</nav>
-		<div class="col-md-3 bloggus-sidebar">
-			<ul class="nav nav-pills nav-stacked">
 
-				<div class="container-fluid">
-
-				</div>
-			</ul>
-		</div>
 		<div class="container">
 			@yield('content')
 		</div>

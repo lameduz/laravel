@@ -1,9 +1,11 @@
 <?php namespace App\Http\Controllers;
 
+use App\Blog;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class BlogsController extends Controller {
 
@@ -14,8 +16,9 @@ class BlogsController extends Controller {
 	 */
 	public function index()
 	{
-		//
-	}
+        return view('blogs.index');
+
+    }
 
 	/**
 	 * Show the form for creating a new resource.
@@ -24,7 +27,7 @@ class BlogsController extends Controller {
 	 */
 	public function create()
 	{
-		//
+        return view('blogs.add');
 	}
 
 	/**
@@ -32,9 +35,13 @@ class BlogsController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(Request $request)
 	{
-		//
+		$blog = new Blog($request->all());
+        $user = Auth::user();
+        $user->blogs()->save($blog);
+        return redirect()->route('');
+
 	}
 
 	/**
