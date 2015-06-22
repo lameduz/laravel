@@ -13,3 +13,32 @@
 {
     display:none;
 }
+
+.navbar-brand
+{
+	float: none;
+}
+
+.navbar-brand img
+{
+	height: 50px;
+	margin: -10px 0px -11px 0px;
+}
+
+.dropdown-toggle
+{
+	font-size: 25px;
+  	margin-top: 10px;
+  	margin-right: 5px;
+}
+
+.caret
+{
+	margin-left: 10px;
+}
+
+
+/*.navbar-default{
+
+	height: 60px !important;
+}*/
