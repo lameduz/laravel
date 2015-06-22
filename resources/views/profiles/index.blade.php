@@ -14,8 +14,15 @@
             {!! Form::close() !!}
         </div>
         <p>Proutorut</p>
-        <div class="well well-lg" id="profile-description">
+        <div id="profile">
+        <div class="well well-lg profile-description" >
            {{$user->profile->description}}
+        </div>
+
+
+        <div class="edit-tools">
+            <button class="edit-profile-confirm">Modifier</button>
+        </div>
         </div>
     </div>
     <div class="col-md-4">

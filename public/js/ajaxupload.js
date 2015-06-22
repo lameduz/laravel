@@ -2,8 +2,8 @@ $(document).ready(function()
 {
     var form = $('.form-ajax-profile-pic');
     var newProfileInput = $('#profile-pic');
-    var description = $('#profile-description');
-    var editBtn = $('#btn-profile-description');
+    var description = $('.profile-description');
+    var editBtn = $('.edit-profile-confirm');
 
     form.bind('submit',function(e)
     {
@@ -26,29 +26,17 @@ $(document).ready(function()
         });
     });
 
-    function replaceInputToEdit()
-    {
-        $(this).replaceWith($('<textarea id="profile-description">Prout</textarea>'));
-    }
 
-    description.hover(function()
+    description.click(function()
     {
-        $(this).append('<button id="btn-profile-description">Modifier</button>');
-    },function()
-    {
-        $(this).find('button').remove();
+        $(this).attr('contenteditable','true');
+        $(this).focus();
+        $('#profile').find('.edit-tools').show();
     });
 
-    editBtn.click(replaceInputToEdit);
-
-
-
-
-
-
-
-
-
+    description.blur(function(e){
+        $('#profile').find('.edit-tools').hide();
+    });
 
 
 
