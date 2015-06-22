@@ -3,6 +3,7 @@ $(document).ready(function()
     var form = $('.form-ajax-profile-pic');
     var newProfileInput = $('#profile-pic');
     var description = $('#profile-description');
+    var editBtn = $('#btn-profile-description');
 
     form.bind('submit',function(e)
     {
@@ -30,14 +31,16 @@ $(document).ready(function()
         $(this).replaceWith($('<textarea id="profile-description">Prout</textarea>'));
     }
 
-
     description.hover(function()
     {
-        $(this).append('<button>Dododod</button>');
-    }, function()
+        $(this).append('<button id="btn-profile-description">Modifier</button>');
+    },function()
     {
-        console.log('hoverout');
+        $(this).find('button').remove();
     });
+
+    editBtn.click(replaceInputToEdit);
+
 
 
 
