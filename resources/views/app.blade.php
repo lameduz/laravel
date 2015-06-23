@@ -43,7 +43,7 @@
 						<li><a href="{{ url('register') }}">S'enregistrer</a></li>
 						@else
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->username }}<span class="caret"></span></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img src="{{ Auth::user()->profile->profilepic }}" id="header_profilepic">{{ Auth::user()->username }}<span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
 								<li><a href="{{route('profiles.index')}}">Mon profil</a></li>
 								<li><a href="{{route('blog.index')}}">Gérer mes blogs</a></li>

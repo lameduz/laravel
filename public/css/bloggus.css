@@ -14,6 +14,12 @@
     display:none;
 }
 
+.navbar
+{
+	background-color: #F8E315;
+	border-radius: 0px;
+}
+
 .navbar-brand
 {
 	float: none;
@@ -35,6 +41,12 @@
 .caret
 {
 	margin-left: 10px;
+}
+
+#header_profilepic
+{
+	height: 45px;
+	margin-right: 10px;
 }
 
 
