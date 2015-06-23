@@ -9,6 +9,7 @@
 	<link href="{{ asset('/css/bloggus.css') }}" rel="stylesheet">
 	<!-- Fonts -->
 	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -45,18 +46,18 @@
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img src="{{ Auth::user()->profile->profilepic }}" id="header_profilepic">{{ Auth::user()->username }}<span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
-								<li><a href="{{route('profiles.index')}}">Mon profil</a></li>
-								<li><a href="{{route('blog.index')}}">Gérer mes blogs</a></li>
+								<li><a href="{{route('profiles.index')}}"><i class="fa fa-user"></i>Mon profil</a></li>
+								<li><a href="{{route('blog.index')}}"><i class="fa fa-cog"></i>Gérer mes blogs</a></li>
 								<!-- <ul class="dropdown-menu" role="menu">
 									<li>Blog1</li>
 									<li>Blog1</li>
 									<li>Blog1</li>
 								</ul> -->
 								
-								<li><a href="#">Messages</a></li>
-								<li><a href="#">Mes amis</a></li>
+								<li><a href="#"><i class="fa fa-envelope-o"></i>Messages</a></li>
+								<li><a href="#"><i class="fa fa-users"></i>Mes amis</a></li>
 								<li class="divider"></li>
-								<li><a href="{{ url('/auth/logout') }}">Déconnexion</a></li>
+								<li><a href="{{ url('/auth/logout') }}"><i class="fa fa-power-off"></i>Déconnexion</a></li>
 							</ul>
 						</li>
 						@endif

@@ -1,3 +1,12 @@
+body{
+	background-color: #fbf18e;
+}
+
+.navbar
+{
+	border: none;
+}
+
 .bloggus-sidebar
 {
     background-color:ghostwhite;
@@ -49,7 +58,79 @@
 	margin-right: 10px;
 }
 
+#profile-pic
+{
+	width: 300px;
+	height: auto;
+	position: relative;
+	border-radius: 3px;
+}
 
+.current-profile-pic
+{
+	border: 5px solid #cecece;
+	border-radius: 5px;
+	width: 310px;
+}
+
+.new-profile-pic
+{
+	margin-left: 50%;
+}
+
+.col-md-4
+{
+	display: inline-block;
+}
+
+.col-user-infos
+{
+	margin-left: 25%;
+	margin-top: 80px;
+}
+
+.user-infos
+{
+	font-weight: bold;
+}
+
+.col-descr
+{
+	float: right;
+	margin-right: 20%;
+}
+
+#col-descr-bulle
+{
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 7.5px 45px 7.5px 0;
+	border-color: transparent #f5f5f5 transparent transparent;
+	right: 90%;
+	top: 60%;
+	position: absolute;
+}
+
+.profile-user-stats
+{
+	width: 285px;
+	background-color: #f9eb5d;
+	padding: 20px 20px 10px 20px;
+	border: 1px solid #e1d87f;
+}
+
+.bloggus-sidebar
+{
+	background-color: #fbf18e;
+	margin-left: -30px;
+	margin-right: 30px;
+}
+
+.fa
+{
+	margin-right: 20px;
+}
 /*.navbar-default{
 
 	height: 60px !important;

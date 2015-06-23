@@ -31,6 +31,13 @@ Route::get('blogs', ['uses' => 'BlogsController@index','as' => 'blog.index']);
 Route::get('blog/new',['uses' => 'BlogsController@create','as' => 'blog.new']);
 Route::post('blog/new',['uses' => 'BlogsController@store','as' => 'blog.store']);
 
+Route::group(['domain' => '{blogname}.bloggus.dev'], function()
+{
+	Route::get('/', function()
+	{
+		return 'prout';
+	});
+});
 
 Route::controllers([
     'auth' => 'Auth\AuthController',
