@@ -15,18 +15,18 @@
         </div>
     @endif
 
-    <div class="col-md-6">
-        <p>Dernier articles postés</p>
-    </div>
-
-    <div class="col-md-6">
-        <p>Derniers commentaires postés</p>
-    </div>
-
-    <div class="col-md-6">
-        <p>Dernier qqch postés</p>
-    </div>
-    <div class="col-md-6">
-        <p>Dernier qqch postés</p>
-    </div>
+        <div class="panel panel-default myblogs">
+            <div class="panel-heading myblogs-title">Mes blogs</div>
+                <div class="myblogs-thumbnails">
+                    <a href="{{route('blog.index')}}"><img src="img/benz.jpg"></a>
+                </div>
+                <div class="panel-body myblogs-name">
+                    <a href="{{route('blog.index')}}">
+                        <span class="myblogs-nametitle">BLABLABLA</span><br/>
+                        <span class="myblogs-descr">Un petit blog cool et sympa sur les voitures de luxe</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
 @endsection

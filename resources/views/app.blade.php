@@ -10,6 +10,8 @@
 	<!-- Fonts -->
 	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Viga' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Hind' rel='stylesheet' type='text/css'>
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -47,7 +49,7 @@
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img src="{{ Auth::user()->profile->profilepic }}" id="header_profilepic">{{ Auth::user()->username }}<span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
 								<li><a href="{{route('profiles.index')}}"><i class="fa fa-user"></i>Mon profil</a></li>
-								<li><a href="{{route('blog.index')}}"><i class="fa fa-cog"></i>Gérer mes blogs</a></li>
+								<li><a href="{{route('blogs.index')}}"><i class="fa fa-cog"></i>Gérer mes blogs</a></li>
 								<!-- <ul class="dropdown-menu" role="menu">
 									<li>Blog1</li>
 									<li>Blog1</li>

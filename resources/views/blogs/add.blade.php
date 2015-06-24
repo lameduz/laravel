@@ -4,7 +4,7 @@
     <div class="col-md-5">
     <div class="form-group">
 
-    {!! Form::open(['route' => 'blog.store']) !!}
+    {!! Form::open(['route' => 'blogs.store']) !!}
     {!! Form::label('subdomain','Choisi un nom') !!}
     {!! Form::text('subdomain',null,['class'=>'form-control']) !!}
     {!! Form::label('title','Donne un titre à ton blog') !!}
