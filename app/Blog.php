@@ -15,4 +15,9 @@ class Blog extends Model {
         return $this->hasMany('App\Post');
     }
 
+    public function findBySubdomain($subdomain)
+    {
+        ;
+    }
+
 }

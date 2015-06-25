@@ -18,14 +18,16 @@
         <div class="panel panel-default myblogs">
             <div class="panel-heading myblogs-title">Mes blogs</div>
                 <div class="myblogs-thumbnails">
-                    <a href="{{route('blog.index')}}"><img src="img/benz.jpg"></a>
+                    <a href="{{route('blogs.index')}}"><img src="img/benz.jpg"></a>
                 </div>
+                @foreach($blogs as $blog)
                 <div class="panel-body myblogs-name">
-                    <a href="{{route('blog.index')}}">
-                        <span class="myblogs-nametitle">BLABLABLA</span><br/>
-                        <span class="myblogs-descr">Un petit blog cool et sympa sur les voitures de luxe</span>
+                    <a href="{{route('blog.dashboard',['id' => $blog->id])}}">
+                        <span class="myblogs-nametitle">{{$blog->title}}</span><br/>
+                        <span class="myblogs-descr">{{$blog->description}}</span>
                     </a>
                 </div>
+                    @endforeach
             </div>
         </div>
         
