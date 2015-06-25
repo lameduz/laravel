@@ -5,7 +5,7 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
-class UsersBlogsController extends Controller {
+class BlogsArticlesController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -14,14 +14,9 @@ class UsersBlogsController extends Controller {
 	 */
 	public function index()
 	{
-		return "salut le blog trop cool index";
-		//return view('userblog.index');
+		//
 	}
 
-    public function blogDashBoard($id)
-    {
-        return view('userblog.dashboard')->with('id',$id);
-    }
 	/**
 	 * Show the form for creating a new resource.
 	 *
@@ -29,7 +24,7 @@ class UsersBlogsController extends Controller {
 	 */
 	public function create()
 	{
-		//
+        return view('articles.create');
 	}
 
 	/**

@@ -8,7 +8,7 @@
 <div class="editblog-row">
 	<div class="col-md-8">
 			<button onclick="location.href='#'" type="button" class="btn btn-default post-article-button" href="#">
-				<i class="fa fa-pencil-square-o"></i><span>Poster un article</span>
+				<i class="fa fa-pencil-square-o"></i><span><a href="{{route('blogs.articles.create',['id' => $id])}}">Poster un article</span>
 			</button>
 	</div>
 </div>

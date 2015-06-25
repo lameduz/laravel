@@ -40,6 +40,8 @@ Route::controllers([
 
 /* Route pour accéder au dashboard d'un blog */
 Route::get('blog/{id}', ['uses' => 'UsersBlogsController@blogDashBoard','as' => 'blog.dashboard' ]);
+
+Route::resource('blogs.articles','BlogsArticlesController');
 Route::group(['domain' => '{blogname}.bloggus.dev'], function()
 {
     Route::group(['middleware' => 'blogexist'],function()
