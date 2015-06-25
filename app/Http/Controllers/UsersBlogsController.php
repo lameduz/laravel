@@ -70,7 +70,8 @@ class UsersBlogsController extends Controller {
 
     public function settings($id)
     {
-        return view('userblog.settings')->with('id',$id);
+        $blog = Blog::find($id)->first();
+        return view('userblog.settings')->with(['id' => $id, 'blog' => $blog]);
     }
 	/**
 	 * Update the specified resource in storage.

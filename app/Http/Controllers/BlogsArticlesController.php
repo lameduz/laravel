@@ -41,7 +41,7 @@ class BlogsArticlesController extends Controller {
         if($request->ajax())
         {
             $post = new Post($request->only('title','image','body'));
-            dd($request->all());
+            dd($request->file('image'));
             $blog = Blog::find($id);
             $blog->posts()->save($post);
         }

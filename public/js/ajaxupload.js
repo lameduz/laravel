@@ -71,7 +71,6 @@ $(document).ready(function()
     var blogId = window.location.pathname.split('/')[2];
 
     postBtn.click(function(e){
-            var postImage = postContainer.find('input');
             var request = $.ajax({
                 type: "POST",
                 url:'new',
@@ -85,7 +84,7 @@ $(document).ready(function()
         });
     });
 
-    /*formPostImg.bind('submit',function(e)
+    formPostImg.bind('submit',function(e)
     {
 
         e.preventDefault();
@@ -95,17 +94,17 @@ $(document).ready(function()
         $.ajax({
             type: form.attr('method'),
             url: form.attr('action'),
-            data: {image : imgPath},
+            data: imgPath,
 
 
             success: function(data) {
-                console.log(data);
+                console.log('Ok');
             },
             error: function(data) {
                 console.log('error');
             }
         });
-    });*/
+    });
 
 
 
