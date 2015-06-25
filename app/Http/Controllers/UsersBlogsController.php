@@ -14,9 +14,14 @@ class UsersBlogsController extends Controller {
 	 */
 	public function index()
 	{
-		return view('userblog.index');
+		return "salut le blog trop cool index";
+		//return view('userblog.index');
 	}
 
+    public function blogDashBoard($id)
+    {
+        return view('userblog.dashboard');
+    }
 	/**
 	 * Show the form for creating a new resource.
 	 *

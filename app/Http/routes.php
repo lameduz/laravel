@@ -12,19 +12,14 @@
 */
 
 
+
 Route::get('/', 'HomeController@index');
 Route::get('register',['uses' => 'UsersController@getRegister', 'as' => 'users.getregister']);
 Route::post('register', ['uses' => 'UsersController@postRegister','as' => 'users.postregister']);
 
 Route::get('login', ['uses' => 'UsersController@getLogin', 'as' => 'users.getlogin']);
 Route::post('login', ['uses' => 'UsersController@postLogin', 'as' => 'users.postlogin']);
-Route::group(['domain' => '{blogname}.bloggus.dev'], function()
-{
-	Route::get('/', function()
-	{
-		return 'prout';
-	});
-});
+
 
 Route::post('profile/edit/desc',['uses' => 'ProfilesController@postProfileDescription','as' => 'profiles.edit.desc']);
 
@@ -43,5 +38,16 @@ Route::controllers([
     'password' => 'Auth\PasswordController',
 ]);
 
-Route::get('blog', ['uses' => 'UsersBlogsController@index','as' => 'blog.index' ]);
+/* Route pour accéder au dashboard d'un blog */
+Route::get('blog/{id}', ['uses' => 'UsersBlogsController@blogDashBoard','as' => 'blog.dashboard' ]);
+Route::group(['domain' => '{blogname}.bloggus.dev'], function()
+{
+    Route::group(['middleware' => 'blogexist'],function()
+    {
+        /* Route pour accéder à un blog */
+        Route::get('/', 'UsersBlogsController@index');
+
+    });
+
+});
 

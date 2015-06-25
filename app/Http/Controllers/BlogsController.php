@@ -4,6 +4,7 @@ use App\Blog;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -16,7 +17,8 @@ class BlogsController extends Controller {
 	 */
 	public function index()
 	{
-        return view('blogs.index');
+        $blogs = User::find(Auth::user()->id)->blogs()->get();
+        return view('blogs.index')->with('blogs',$blogs);
 
     }
 
