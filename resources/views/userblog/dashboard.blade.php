@@ -18,7 +18,7 @@
 		 <div class="panel panel-default myblogs">
             <div class="panel-heading myblogs-title">Mes articles</div>
                 <div class="myblogs-thumbnails">
-                    <a href="#"><img src="img/benz.jpg"></a>
+                    <a href="#"><img src="{{ asset('img/benz.jpg') }}"</a>
                 </div>
                 <div class="panel-body myblogs-name">
                     <a href="#">
