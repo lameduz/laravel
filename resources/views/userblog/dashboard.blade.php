@@ -4,8 +4,11 @@
 
     <div class="col-md-3 edit-blog-sidebar">
         <h3>Infos du blog</h3>
+        <div class="blog-thumbnail">
+            <img src="{{asset('img/benz.jpg')}}" class="">
+        </div>
         <div class="bloginfos">
-            <span class="bloginfos-created-at">créé le {{$blog->created_at}}</span><br/>            
+            <span class="bloginfos-created-at">créé le 12/12/2012</span><br/>            
             <span class="bloginfos-articles">12 articles</span><br/>
             <span class="bloginfos-commentaires">8 commentaires</span><br/>
 
