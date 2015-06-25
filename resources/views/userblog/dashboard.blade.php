@@ -12,7 +12,7 @@
         </div>
         <div class="edit-tools" style="display: block;">
             <button class="edit-profile-confirm">Modifier</button>
-            <meta name="csrf-token" content="ngsiQgBP5rz0SobrxxzVQaN2P94Qd4WSTvaX1SwC">
+            <meta name="csrf-token" content="{{ csrf_token() }}">
         </div>
         <h3>Infos du blog</h3>
         <div class="bloginfos">
