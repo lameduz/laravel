@@ -23,8 +23,8 @@ class UsersBlogsController extends Controller {
 
     public function blogDashBoard($id)
     {
-        $blog = User::find(Auth::user()->id)->blogs()->whereId($id)->first();
-        return view('userblog.dashboard')->with(['id' => $id,'blog' => $blog]);
+        $blogs = User::find(Auth::user()->id)->blogs()->whereId($id)->first();
+        return view('userblog.dashboard')->with(['id' => $id,'blogs' => $blogs]);
     }
 	/**
 	 * Show the form for creating a new resource.

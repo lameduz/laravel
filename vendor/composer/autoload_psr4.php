@@ -21,4 +21,5 @@ return array(
     'ClassPreloader\\' => array($vendorDir . '/classpreloader/classpreloader/src'),
     'Appzcoder\\CrudGenerator\\' => array($vendorDir . '/appzcoder/crud-generator/src'),
     'App\\' => array($baseDir . '/app'),
+    'Anomaly\\WysiwygFieldType\\' => array($vendorDir . '/anomaly/wysiwyg-field_type/src'),
 );

@@ -8,19 +8,7 @@
         </button>
     </a>
 </div>
-@if(Auth::user()->blogs()->count() == 0)
-<div class="col-md-10 col-md-offset-1">
-   <div id="no-blog-yet">
-       <div class="panel panel-default">
-           <div class="panel-heading">Je suis nul en design</div>
-           <div class="panel-body">
-               <a href="{{route('blogs.new')}}">Pas encore de blog ? Créer ton premier blog !</a>
-           </div>
-           <div class="panel-footer">Bonjour Léo change mon apparence stp </div>
-       </div>
-   </div>
-</div>
-@endif
+
 
 
 <div class="panel panel-default myblogs">

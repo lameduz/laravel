@@ -38,13 +38,28 @@ class BlogsArticlesController extends Controller {
 
     public function postArticle($id,Request $request)
     {
-        if($request->ajax())
+        $file = $request->file('image');
+
+        $post = new Post($request->only('title','body'));
+
+        $filename = $file->getClientOriginalName();
+        $postImgDir = 'storage/'.$id.'/img';
+
+        if(!file_exists($postImgDir)) mkdir($postImgDir,777,true);
+
+        $file->move($postImgDir, $filename);
+
+        $post->image = $postImgDir.'/'.$filename;
+        $blog = Blog::find($id);
+
+
+        if($blog->posts()->save($post))
         {
-            $post = new Post($request->only('title','image','body'));
-            dd($request->file('image'));
-            $blog = Blog::find($id);
-            $blog->posts()->save($post);
-        }
+            return redirect()->route('blog.dashboard',['id' => $id]);
+        };
+
+
+
     }
 
 	/**

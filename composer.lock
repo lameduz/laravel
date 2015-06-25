@@ -4,8 +4,56 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9d69066f481de975b7a4d25f8d1b42d3",
+    "hash": "80b5636ca8a33bd8fbda76a9824f4736",
     "packages": [
+        {
+            "name": "anomaly/wysiwyg-field_type",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/anomalylabs/wysiwyg-field_type.git",
+                "reference": "2690523ea53625d0b3891eb6ba672f01bb1f0043"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/anomalylabs/wysiwyg-field_type/zipball/2690523ea53625d0b3891eb6ba672f01bb1f0043",
+                "reference": "2690523ea53625d0b3891eb6ba672f01bb1f0043",
+                "shasum": ""
+            },
+            "type": "streams-addon",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Anomaly\\WysiwygFieldType\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "AnomalyLabs, Inc.",
+                    "email": "hello@anomaly.is",
+                    "homepage": "http://anomaly.is/",
+                    "role": "Owner"
+                }
+            ],
+            "description": "A WYSIWYG wysiwyg field type powered by CKEditor.",
+            "homepage": "http://anomaly.is/",
+            "keywords": [
+                "ckwysiwyg",
+                "laravel",
+                "pyrocms",
+                "streams-addon",
+                "wysiwyg"
+            ],
+            "time": "2015-05-14 18:18:06"
+        },
         {
             "name": "appzcoder/crud-generator",
             "version": "dev-master",
@@ -3353,7 +3401,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "appzcoder/crud-generator": 20
+        "appzcoder/crud-generator": 20,
+        "anomaly/wysiwyg-field_type": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

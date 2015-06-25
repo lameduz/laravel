@@ -49,6 +49,7 @@ $(document).ready(function()
     });
 
 
+
     editBtn.click(function(e){
         $('#profile').find('.edit-tools').hide();
         var request = $.ajax({
@@ -70,7 +71,7 @@ $(document).ready(function()
 
     var blogId = window.location.pathname.split('/')[2];
 
-    postBtn.click(function(e){
+    /*postBtn.click(function(e){
             var request = $.ajax({
                 type: "POST",
                 url:'new',
@@ -104,7 +105,7 @@ $(document).ready(function()
                 console.log('error');
             }
         });
-    });
+    });*/
 
 
 

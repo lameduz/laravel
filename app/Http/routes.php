@@ -24,6 +24,7 @@ Route::group(['domain' => '{blogname}.bloggus.dev'], function()
 });
 
 Route::post('blogs/{id}/articles/new',['uses' => 'BlogsArticlesController@postArticle','as' => 'blogs.article.new']);
+Route::post('blogs/{blogid}/articles/{postid}/edit',['uses' => 'BlogsArticlesController@postEdit','as' => 'blogs.article.edit']);
 Route::resource('blogs.articles','BlogsArticlesController');
 
 

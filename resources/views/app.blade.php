@@ -79,5 +79,6 @@
 		<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
 		<script src="{{ asset('js/ajaxupload.js') }}"></script>
         <script src="{{asset('js/editor.js')}}"></script>
+        <script src="{{asset('js/ckeditor/ckeditor.js')}}"></script>
 	</body>
 	</html>
