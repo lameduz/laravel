@@ -3,7 +3,14 @@
 @section('content')
 
     <div class="col-md-3 edit-blog-sidebar">
-        <p>prout</p>
+        <h3>Infos du blog</h3>
+        <div class="bloginfos">
+            <span class="bloginfos-created-at">créé le {{$blog->created_at}}</span><br/>            
+            <span class="bloginfos-articles">12 articles</span><br/>
+            <span class="bloginfos-commentaires">8 commentaires</span><br/>
+
+
+        </div>
     </div>
 <div class="editblog-row">
 	<div class="col-md-8">
