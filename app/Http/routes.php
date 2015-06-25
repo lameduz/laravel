@@ -48,6 +48,7 @@ Route::post('profile/pic/new',['uses' => 'ProfilesController@postProfilePic','as
 Route::get('blogs', ['uses' => 'BlogsController@index','as' => 'blogs.index']);
 Route::get('blog/new',['uses' => 'BlogsController@create','as' => 'blogs.new']);
 Route::post('blog/new',['uses' => 'BlogsController@store','as' => 'blogs.store']);
+
 Route::controllers([
     'auth' => 'Auth\AuthController',
     'password' => 'Auth\PasswordController',
@@ -55,5 +56,6 @@ Route::controllers([
 
 /* Route pour accéder au dashboard d'un blog */
 Route::get('blog/{id}', ['uses' => 'UsersBlogsController@blogDashBoard','as' => 'blog.dashboard' ]);
+Route::get('blog/{id}/settings', ['uses' => 'UsersBlogsController@settings','as' => 'blog.settings']);
 
 

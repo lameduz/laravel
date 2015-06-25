@@ -68,6 +68,10 @@ class UsersBlogsController extends Controller {
 		//
 	}
 
+    public function settings($id)
+    {
+        return view('userblog.settings')->with('id',$id);
+    }
 	/**
 	 * Update the specified resource in storage.
 	 *
