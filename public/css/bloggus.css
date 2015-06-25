@@ -358,3 +358,8 @@ img.intLink {
     width: 100%;
 }
 
+.post-textarea
+{
+    border:1px solid black;
+}
+

@@ -1,8 +1,10 @@
 <?php namespace App\Http\Controllers;
 
+use App\Blog;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Post;
 use Illuminate\Http\Request;
 
 class BlogsArticlesController extends Controller {
@@ -22,9 +24,9 @@ class BlogsArticlesController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function create()
+	public function create($id)
 	{
-        return view('articles.create');
+        return view('articles.create')->with('id',$id);
 	}
 
 	/**
@@ -32,10 +34,18 @@ class BlogsArticlesController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
-	{
-		//
-	}
+
+
+    public function postArticle($id,Request $request)
+    {
+        if($request->ajax())
+        {
+            $post = new Post($request->only('title','image','body'));
+            dd($request->all());
+            $blog = Blog::find($id);
+            $blog->posts()->save($post);
+        }
+    }
 
 	/**
 	 * Display the specified resource.

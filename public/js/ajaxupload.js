@@ -5,12 +5,18 @@ $(document).ready(function()
     var description = $('.profile-description');
     var editBtn = $('.edit-profile-confirm');
     var postBtn = $('#post-submit-btn');
-    var textBox = $('.post-textarea');
+    var postTitle = $('.post-title');
+    var postContainer = $('#post-container');
+    var postBody = $('#textBox');
+    var formPostImg = $('#form-post-img');
+    var postImg = document.getElementById('postImage');
+
     $.ajaxSetup({
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         }
     });
+
 
     form.bind('submit',function(e)
     {
@@ -65,23 +71,41 @@ $(document).ready(function()
     var blogId = window.location.pathname.split('/')[2];
 
     postBtn.click(function(e){
-        console.log("blogs/"+blogId+"/articles");
+            var postImage = postContainer.find('input');
             var request = $.ajax({
-                url:'blogs/1/article/new',
-            type: "post",
-            dataType:'jsonp',
-            data: { post : textBox.html() }
+                type: "POST",
+                url:'new',
+                dataType:'jsonp',
+                data: { body : postBody.html(), title : postTitle.html()}
         });
 
         request.done(function(msg)
         {
             console.log(msg);
         });
-
-
-
-
     });
+
+    /*formPostImg.bind('submit',function(e)
+    {
+
+        e.preventDefault();
+        var postImage = postContainer.find('input');
+
+        var imgPath = postImg.files[0].name;
+        $.ajax({
+            type: form.attr('method'),
+            url: form.attr('action'),
+            data: {image : imgPath},
+
+
+            success: function(data) {
+                console.log(data);
+            },
+            error: function(data) {
+                console.log('error');
+            }
+        });
+    });*/
 
 
 

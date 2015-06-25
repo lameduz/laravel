@@ -71,8 +71,20 @@
     <img class="intLink" title="Copy" onclick="formatDoc('copy');" src="data:image/gif;base64,R0lGODlhFgAWAIQcAB1ChBFNsTRLYyJYwjljwl9vj1iE31iGzF6MnHWX9HOdz5GjuYCl2YKl8ZOt4qezxqK63aK/9KPD+7DI3b/I17LM/MrL1MLY9NHa7OPs++bx/Pv8/f///////////////yH5BAEAAB8ALAAAAAAWABYAAAWG4CeOZGmeaKqubOum1SQ/kPVOW749BeVSus2CgrCxHptLBbOQxCSNCCaF1GUqwQbBd0JGJAyGJJiobE+LnCaDcXAaEoxhQACgNw0FQx9kP+wmaRgYFBQNeAoGihCAJQsCkJAKOhgXEw8BLQYciooHf5o7EA+kC40qBKkAAAGrpy+wsbKzIiEAOw==" />
     <img class="intLink" title="Paste" onclick="formatDoc('paste');" src="data:image/gif;base64,R0lGODlhFgAWAIQUAD04KTRLY2tXQF9vj414WZWIbXmOrpqbmpGjudClFaezxsa0cb/I1+3YitHa7PrkIPHvbuPs+/fvrvv8/f///////////////////////////////////////////////yH5BAEAAB8ALAAAAAAWABYAAAWN4CeOZGmeaKqubGsusPvBSyFJjVDs6nJLB0khR4AkBCmfsCGBQAoCwjF5gwquVykSFbwZE+AwIBV0GhFog2EwIDchjwRiQo9E2Fx4XD5R+B0DDAEnBXBhBhN2DgwDAQFjJYVhCQYRfgoIDGiQJAWTCQMRiwwMfgicnVcAAAMOaK+bLAOrtLUyt7i5uiUhADs=" />
 </div>
-<div id="textBox" class="post-textarea" contenteditable="true">Lorem ipsum</div>
+<div class="post-textarea post-title" contenteditable="true">Un titre pour votre article</div>
+<div id="post-container">
+    <label name="image">Ajoute une image pour ton article!</label>
+    {!! Form::open(['route' => ['blogs.article.new', 'id' => $id],'id' => 'form-post-img','name'=>'img-upload','files' => true,'method' => 'POST']) !!}
+    <input type="file" id='postImage' name="image" class="post-image" />
+    <div id="textBox" class="post-textarea" contenteditable="true">Lorem Sasou</div>
 
-<div><button id="post-submit-btn">Ajouter un article</button></div>
+
+    <div><button id="post-submit-btn">Ajouter un article</button></div>
+    {!! Form::close() !!}
+
+
+</div>
+
+
 
 @endsection
