@@ -33,7 +33,7 @@
         </a>
 	</div>
     <div class="col-md-3">
-        <a href="#">        
+        <a href="{{route('blog.settings')}}">        
             <button type="button" class="btn btn-default blog-settings-button">
                 <i class="fa fa-cog"></i><span>Modifier le blog</span>
             </button>
