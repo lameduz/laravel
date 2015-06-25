@@ -17,18 +17,22 @@
 <div class="row editblog-last-row">
 	<div class="col-md-9">
 		 <div class="panel panel-default myblogs">
-            <div class="panel-heading myblogs-title">Derniers articles du blog</div>
+            <div class="panel-heading myblogs-title">Mes articles</div>
                 <div class="myblogs-thumbnails">
-                    <a href="{{route('blog.index')}}"><img src="img/benz.jpg"></a>
+                    <a href="#"><img src="img/benz.jpg"></a>
                 </div>
                 <div class="panel-body myblogs-name">
-                    <a href="{{route('blog.index')}}">
-                        <span class="myblogs-nametitle">(TUTO) Comment faire un kamehameha</span><br/>
-                        <span class="myblogs-descr">Bonjour aujourd'hui on va faire du pain à la semoule...</span>
+                    <a href="#">
+                        <span class="myblogs-article-title">(TUTO) Comment faire un kamehameha</span><br/>
+                        <span class="myblogs-article-descr">Bonjour aujourd'hui on va faire du pain à la semoule...</span>
                     </a>
+                    <br/><a href="#" class="modify-link"><i class="fa fa-pencil fa-2x"></i>MODIFIER</a>
                 </div>
             </div>
         </div>
 	</div>
+    <div class="col-md-3 edit-blog-sidebar">
+
+    </div>
 </div>
 @endsection

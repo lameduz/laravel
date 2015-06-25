@@ -206,7 +206,7 @@
 
 .post-article-button
 {
-	background-color: yellow;
+	background-color: #f8e52c;
 	font-size: 120px;
 	border-radius: 10px;
 	width: 830px;
@@ -214,7 +214,7 @@
 
 .post-article-button:hover
 {
-	background-color: #e5e500;
+	background-color: #dfcc12;
 }
 
 .post-article-button span
@@ -230,6 +230,54 @@
 	margin-left: 25px;
 	margin-top: 25px;
 }
+
+.myblogs-article-title
+{
+	font-family: 'Viga', sans-serif;
+	font-size: 30px !important;
+}
+
+.myblogs-article-descr
+{
+	font-size: 18px !important;
+}
+
+.myblogs-thumbnails a img
+{
+	padding-right: 20px;
+}
+
+.myblogs-name .fa-2x
+{
+	margin-right: 5px;
+	font-size: 28px !important;
+}
+
+.myblogs-name .modify-link
+{
+	margin-top: 10px;
+	margin-left: -10px;
+	font-size: 20px;
+	font-family: 'Viga', sans-serif;
+	visibility: hidden;
+}
+
+.myblogs-name:hover .modify-link
+{
+	visibility: visible;
+}
+
+.edit-blog-sidebar
+{
+	background-color:  #f1f1f1;
+	position: absolute;
+	right: 95px;
+	top: 165px;
+	width: 500px;
+	height: 500px;
+}
+
+
 
 
 /*=== BLOG ===*/
@@ -267,3 +315,4 @@
 	font-size: 13px;
 	color: #a6a6a6;
 }
+
