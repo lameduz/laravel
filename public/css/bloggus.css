@@ -191,6 +191,26 @@
 	font-size: 45px !important;
 }
 
+.new-blog-button
+{
+	font-family: 'Viga', sans-serif;
+	font-size: 80px;
+	background-color: #f8e52c;
+	font-size: 120px;
+	border-radius: 10px;
+	width: 885px;
+}
+
+.new-blog-button:hover
+{
+	background-color: #dfcc12;
+}
+
+.myblogs
+{
+	margin-top: 210px;
+}
+
 /*=== EDITION BLOG ===*/
 
 .editblog-row
@@ -231,29 +251,38 @@
 	margin-top: 25px;
 }
 
-.myblogs-article-title
+.myarticles-article-title
 {
 	font-family: 'Viga', sans-serif;
 	font-size: 30px !important;
 }
 
-.myblogs-article-descr
+.myarticles-article-descr
 {
 	font-size: 18px !important;
 }
 
-.myblogs-thumbnails a img
+.myarticles-thumbnails a img
 {
 	padding-right: 20px;
+	margin-top: 15px;
+	margin-left: 15px;
+	width: 250px;
+	float: left;
 }
 
-.myblogs-name .fa-2x
+.myarticles-name a
+{
+	text-decoration: none;
+}
+
+.myarticles-name .fa-2x
 {
 	margin-right: 5px;
 	font-size: 28px !important;
 }
 
-.myblogs-name .modify-link
+.myarticles-name .modify-link
 {
 	margin-top: 10px;
 	margin-left: -10px;
@@ -262,7 +291,7 @@
 	visibility: hidden;
 }
 
-.myblogs-name:hover .modify-link
+.myarticles-name:hover .modify-link
 {
 	visibility: visible;
 }
@@ -296,6 +325,53 @@
 	margin-top: 30px;
 	margin-bottom: 15px;
 	font-family: 'Viga', sans-serif !important;
+}
+
+.edit-blog-sidebar h3
+{
+	margin-top: 50px;
+}
+
+.bloginfos
+{
+	font-size: 16px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#blog-description
+{
+	width: 90%;
+	margin-left: 21px;
+	margin-top: 20px;
+}
+
+.myarticles-title
+{
+	font-family: 'Viga', sans-serif;
+	font-size: 30px;
+	background-color: #fbf18a !important;
+}
+
+.blog-settings-button
+{
+	background-color: #f8e52c;
+	font-size: 50px;
+	border-radius: 10px;
+	width: 425px;
+	margin-left:120px;
+	margin-top: 48px;
+}
+
+.blog-settings-button span
+{
+	font-family: 'Viga', sans-serif;
+	font-size: 45px;
+}
+
+.blog-settings-button:hover
+{
+	background-color: #dfcc12;
 }
 
 
