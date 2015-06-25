@@ -1,9 +1,12 @@
 <?php namespace App\Http\Controllers;
 
+use App\Blog;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UsersBlogsController extends Controller {
 
@@ -20,7 +23,8 @@ class UsersBlogsController extends Controller {
 
     public function blogDashBoard($id)
     {
-        return view('userblog.dashboard')->with('id',$id);
+        $blog = User::find(Auth::user()->id)->blogs()->whereId($id)->first();
+        return view('userblog.dashboard')->with(['id' => $id,'blog' => $blog]);
     }
 	/**
 	 * Show the form for creating a new resource.
@@ -37,9 +41,12 @@ class UsersBlogsController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(Request $request)
 	{
-		//
+		if($request->ajax())
+        {
+            echo 'lol';
+        }
 	}
 
 	/**
