@@ -25,7 +25,7 @@
         </div>
     </div>
 <div class="editblog-row">
-	<div class="col-md-5">
+	<div class="col-md-3">
         <a href="{{route('blogs.articles.create',['id' => $id])}}">        
 			<button type="button" class="btn btn-default post-article-button">
 				<i class="fa fa-pencil-square-o"></i><span>Poster un article</span>
