@@ -9,8 +9,8 @@
 
 					<img src="{{asset($blog->image)}}" class="">
 					<div class="new-blog-pic">
-						{!! Form::open(['route' => 'profiles.new.pic','method' => 'POST','class' => 'form-ajax-profile-pic','files' => true]) !!}
-						<input type="file" name="new-profile-pic" id="new-pic">
+						{!! Form::open(['route' => ['blog.edit.image',$blog->id],'method' => 'POST','id' => 'form-ajax-image','files' => true]) !!}
+						<input type="file" name="blog-image" id="new-pic">
 						<input type="submit" value="Changer de photo!">
 						{!! Form::close() !!}
 					</div>
@@ -36,10 +36,11 @@
 			<div class="panel panel-default">
 				<div class="panel-heading"><h2>Modifier l'arrière-plan du blog</h2></div>
   				<div class="panel-body panelsettings">
+                    <div class="new-blog-pic">
+
   					<img src="{{asset($blog->background)}}" class="">
-					<div class="new-blog-pic">
-						{!! Form::open(['route' => 'profiles.new.pic','method' => 'POST','class' => 'form-ajax-profile-pic','files' => true]) !!}
-						<input type="file" name="new-profile-pic" id="new-pic">
+						{!! Form::open(['route' => ['blog.edit.background',$blog->id],'method' => 'POST','id' => 'form-ajax-background','files' => true]) !!}
+						<input type="file" name="blog-image" id="new-pic">
 						<input type="submit" value="Changer l'arrière-plan!">
 						{!! Form::close() !!}
 					</div>

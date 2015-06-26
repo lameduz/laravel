@@ -60,6 +60,7 @@ Route::get('blog/{id}', ['uses' => 'UsersBlogsController@blogDashBoard','as' => 
 Route::get('blog/{id}/settings', ['uses' => 'UsersBlogsController@settings','as' => 'blog.settings']);
 Route::get('blog/{id}/article/{postid}', ['uses' => 'BlogsArticlesController@show','as' => 'blog.article']);
 Route::post('blog/{id}/article/{postid}/comment', ['uses' => 'BlogsArticlesController@comment','as' => 'blog.article.comment']);
-
+Route::post('blog/{id}/edit/blogImage', ['uses' => 'UsersBlogsController@editBlogImage','as' => 'blog.edit.image']);
+Route::post('blog/{id}/edit/blogBackground', ['uses' => 'UsersBlogsController@editBlogBackground','as' => 'blog.edit.background']);
 
 

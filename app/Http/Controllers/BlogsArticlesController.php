@@ -1,11 +1,14 @@
 <?php namespace App\Http\Controllers;
 
 use App\Blog;
+use App\Comment;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Post;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class BlogsArticlesController extends Controller {
 
@@ -71,13 +74,28 @@ class BlogsArticlesController extends Controller {
 	public function show($blogid,$postid)
 	{
         $post = Blog::find($blogid)->posts()->whereId($postid)->first();
-		return view('articles.show')->with('post', $post);
+        $comment = Comment::wherePost_id($postid)->first();
+
+		return view('articles.show')->with(['blogid' => $blogid, 'post' => $post]);
+
 	}
 
     public function comment($blogid,$postid, Request $request)
     {
-        $blog = Blog::find($blogid)->posts()->whereId($postid)->first();
-        dd($blog);
+        $comment = new Comment($request->all());
+        $post = Post::find($postid)->whereBlog_id($blogid)->first();
+
+        $user = User::find(Auth::user()->id);
+        $comment->blog_id = $blogid;
+        $comment->post_id = $post->id;
+        $comment->user_id = $user->id;
+        $comment->author = $user->username;
+        $comment->body = $request->only('body')['body'];
+
+        $comment->save();
+        return redirect()->back();
+
+
     }
 
 	/**

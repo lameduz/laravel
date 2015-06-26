@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'AddAuthorToCommentsTable' => $baseDir . '/database/migrations/2015_06_26_102902_AddAuthorToCommentsTable.php',
     'AddColumnsToBlogTable' => $baseDir . '/database/migrations/2015_06_09_132213_AddColumnsToBlogTable.php',
     'AddColumnsToProfileTable' => $baseDir . '/database/migrations/2015_06_15_084130_AddColumnsToProfileTable.php',
     'AddCommentsTable' => $baseDir . '/database/migrations/2015_06_09_122953_AddCommentsTable.php',

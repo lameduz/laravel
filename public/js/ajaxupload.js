@@ -10,6 +10,9 @@ $(document).ready(function()
     var postBody = $('#textBox');
     var formPostImg = $('#form-post-img');
     var postImg = document.getElementById('postImage');
+    var formComment = $('#add-comment-form');
+    var formBlogBackground = $('#form-ajax-background');
+    var formBlogImage = $('#form-ajax-image');
 
     $.ajaxSetup({
         headers: {
@@ -38,6 +41,46 @@ $(document).ready(function()
             }
         });
     });
+    formBlogBackground.bind('submit',function(e)
+    {
+        e.preventDefault();
+        $.ajax({
+            type: form.attr('method'),
+            url: form.attr('action'),
+            data: new FormData(this),
+            contentType: false,
+            cache: false,
+            processData:false,
+
+            success: function(data) {
+                console.log('yes');
+            },
+            error: function(data) {
+                console.log('error');
+            }
+        });
+    });
+    formBlogImage.bind('submit',function(e)
+    {
+        e.preventDefault();
+        console.log(formBlogImage.attr('action'));
+        $.ajax({
+            type: formBlogImage.attr('method'),
+            url: formBlogImage.attr('action'),
+            data: new FormData(this),
+            contentType: false,
+            cache: false,
+            processData:false,
+
+            success: function(data) {
+
+            },
+            error: function(data) {
+                console.log('error');
+            }
+        });
+    });
+
 
 
 

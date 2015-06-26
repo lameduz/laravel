@@ -70,8 +70,41 @@ class UsersBlogsController extends Controller {
 
     public function settings($id)
     {
-        $blog = Blog::find($id)->first();
+        $blog = Blog::find($id);
         return view('userblog.settings')->with(['id' => $id, 'blog' => $blog]);
+    }
+
+    public function editBlogImage($id,Request $request)
+    {
+        $file = $request->file('blog-image');
+        $filename = $file->getClientOriginalName();
+        $storageDir = 'storage/';
+        $file->move($storageDir,$filename);
+
+        if($request->ajax())
+        {
+            $blog = Blog::find($id);
+            $blog->image = $storageDir.$filename;
+            $blog->save();
+            return response()->json(['file' => $storageDir.$filename]);
+        }
+    }
+    public function editBlogBackground($id, Request $request)
+    {
+        $blog = Blog::find($id);
+        $file = $request->file('new-profile-pic');
+        $filename = $file->getClientOriginalName();
+        $extension = $file->getClientOriginalExtension();
+        $storageDir = 'storage/';
+        $file->move($storageDir,$filename);
+
+        if($request->ajax())
+        {
+            $blog = Blog::find(Auth::user()->id);
+            $blog->image = $storageDir.$filename;
+            $blog->save();
+            return response()->json(['file' => $storageDir.$filename]);
+        }
     }
 	/**
 	 * Update the specified resource in storage.
