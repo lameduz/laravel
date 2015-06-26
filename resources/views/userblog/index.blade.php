@@ -61,7 +61,7 @@
                              {!! $post->body !!}
                          </div>
                      </div>
-                 <br/><a href="{{route('blogs.article.edit',['blogid' => $blogs->id,'id' => $post->id])}}" class="modify-link"><i class="fa fa-pencil fa-2x"></i>MODIFIER</a>
+                 <br/><a href="{{route('blogs.article.edit',['blogid' => $blog->id,'id' => $post->id])}}" class="modify-link"><i class="fa fa-pencil fa-2x"></i>MODIFIER</a>
 
              @endforeach
                 </div>
