@@ -5,7 +5,7 @@
     <div class="col-md-3 edit-blog-sidebar">
         <h1>{{$blogs->title}}</h1>
         <div class="blog-thumbnail">
-            <img src="{{asset('img/benz.jpg')}}" class="">
+            <img src="{{asset($blogs->image)}}" class="">
         </div>
         <div id="blog-description" class="well well-lg blog-description" contenteditable="true">
             {{$blogs->description}}

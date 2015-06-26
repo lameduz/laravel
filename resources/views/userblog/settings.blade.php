@@ -1,12 +1,13 @@
 @extends('app')
 
 @section('content')
-<div class="row">
-	<div class="col-md-3">
+	<div class="col-md-6">
+
 			<div class="panel panel-default">
 				<div class="panel-heading"><h2>Modifier l'image du blog</h2></div>
   				<div class="panel-body panelsettings">
-					<img src="{{asset('img/benz.jpg')}}" class="">
+
+					<img src="{{asset($blog->image)}}" class="">
 					<div class="new-blog-pic">
 						{!! Form::open(['route' => 'profiles.new.pic','method' => 'POST','class' => 'form-ajax-profile-pic','files' => true]) !!}
 						<input type="file" name="new-profile-pic" id="new-pic">
@@ -16,9 +17,7 @@
 				</div>
 			</div>
 	</div>
-</div>
-<div class="row">
-	<div class="col-md-3">
+	<div class="col-md-6">
 			<div class="panel panel-default">
 				<div class="panel-heading"><h2>Modifier le titre du blog</h2></div>
   				<div class="panel-body panelsettings">
@@ -32,13 +31,12 @@
 				</div>
 			</div>
 	</div>
-</div>
-<div class="row">
+
 	<div class="col-md-3">
 			<div class="panel panel-default">
 				<div class="panel-heading"><h2>Modifier l'arrière-plan du blog</h2></div>
   				<div class="panel-body panelsettings">
-  					<img src="{{asset('img/wallpaper.jpg')}}" class="">
+  					<img src="{{asset($blog->background)}}" class="">
 					<div class="new-blog-pic">
 						{!! Form::open(['route' => 'profiles.new.pic','method' => 'POST','class' => 'form-ajax-profile-pic','files' => true]) !!}
 						<input type="file" name="new-profile-pic" id="new-pic">
@@ -48,8 +46,7 @@
 				</div>
 			</div>
 	</div>
-</div>
-<div class="row">
+
 	<div class="col-md-3">
 			<div class="panel panel-default">
 				<div class="panel-heading"><h2>Modifier la couleur des articles</h2></div>
@@ -61,6 +58,5 @@
 				</div>
 			</div>
 	</div>
-</div>
 
 @endsection

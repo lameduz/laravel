@@ -37,6 +37,7 @@ class UsersController extends Controller {
         $profile = new Profile($request->only('birthdate','sexe'));
         $user->save();
         $user->profile()->save($profile);
+        return redirect('/');
 	}
 
     public function getLogin()

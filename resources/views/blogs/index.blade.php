@@ -13,10 +13,11 @@
 
 <div class="panel panel-default myblogs">
     <div class="panel-heading myblogs-title">Mes blogs</div>
-    <div class="myblogs-thumbnails">
-        <a href="{{route('blogs.index')}}"><img src="img/benz.jpg"></a>
-    </div>
     @foreach($blogs as $blog)
+
+    <div class="myblogs-thumbnails">
+        <a href="{{route('blogs.index')}}"><img src="{{asset($blog->image)}}"></a>
+    </div>
     <div class="panel-body myblogs-name">
         <a href="{{route('blog.dashboard',['id' => $blog->id])}}">
             <span class="myblogs-nametitle">{{$blog->title}}</span><br/>

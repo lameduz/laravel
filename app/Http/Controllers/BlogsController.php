@@ -40,7 +40,8 @@ class BlogsController extends Controller {
 	public function store(Request $request)
 	{
 		$blog = new Blog($request->all());
-        $user = Auth::user();
+        $user = User::find(Auth::user()->id);
+
         $user->blogs()->save($blog);
         return redirect()->route('blogs.index');
 
