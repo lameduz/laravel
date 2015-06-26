@@ -15,9 +15,10 @@ class UsersBlogsController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index($route)
 	{
-		return view('userblog.index');
+
+		return view('userblog.index')->with(Blog::whereSubdomain($route)->get());
 	}
 
     public function blogDashBoard($id)
