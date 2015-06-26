@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('content')
-
+<div class="background" style="background-image: url({{asset($blogs->background)}})">
     <div class="col-md-3 edit-blog-sidebar">
         <h1>{{$blogs->title}}</h1>
         <div class="blog-thumbnail">
@@ -17,34 +17,34 @@
         <h3>Infos du blog</h3>
         <div class="bloginfos">
             <i class="fa fa-calendar"></i><span class="bloginfos-created-at">créé le <strong>{{$blogs->created_at}}</strong></span><br/>
-            <i class="fa fa-pencil-square"></i><span class="bloginfos-articles"><strong>12</strong> articles</span><br/>
+            <i class="fa fa-pencil-square"></i><span class="bloginfos-articles"><strong>{{$blogs->posts->count()}}</strong> articles</span><br/>
             <i class="fa fa-comment"></i><span class="bloginfos-commentaires"><strong>8</strong> commentaires</span><br/>
             <i class="fa fa-plus"></i><span class="bloginfos-abonnés"><strong>1 289 345</strong> abonnés</span><br/>
 
 
         </div>
     </div>
-<div class="editblog-row">
-	<div class="col-md-3">
-        <a href="{{route('blogs.articles.create',['id' => $id])}}">        
-			<button type="button" class="btn btn-default post-article-button">
-				<i class="fa fa-pencil-square-o"></i><span>Poster un article</span>
-			</button>
-        </a>
-	</div>
-    <div class="col-md-3">
-        <a href="{{route('blog.settings',['id' => $blogs->id])}}">
-            <button type="button" class="btn btn-default blog-settings-button">
-                <i class="fa fa-cog"></i><span>Modifier le blog</span>
-            </button>
-        </a>
+    <div class="editblog-row">
+	   <div class="col-md-3">
+            <a href="{{route('blogs.articles.create',['id' => $id])}}">        
+			 <button type="button" class="btn btn-default post-article-button">
+			     <i class="fa fa-pencil-square-o"></i><span>Poster un article</span>
+			 </button>
+            </a>
+	   </div>
+        <div class="col-md-3">
+            <a href="{{route('blog.settings',['id' => $blogs->id])}}">
+                <button type="button" class="btn btn-default blog-settings-button">
+                    <i class="fa fa-cog"></i><span>Modifier le blog</span>
+                </button>
+            </a>
+        </div>
     </div>
-</div>
 
-<div class="editblog-last-row">
-	<div class="col-md-9">
-		 <div class="panel panel-default myarticles">
-            <div class="panel-heading myarticles-title">Mes articles</div>
+    <div class="editblog-last-row">
+	   <div class="col-md-9">
+	       <div class="panel panel-default myarticles">
+             <div class="panel-heading myarticles-title">Mes articles</div>
                 <div class="myarticles-thumbnails">
 
 
@@ -62,14 +62,14 @@
                          </div>
                      </div>
                  <br/><a href="{{route('blogs.article.edit',['blogid' => $blogs->id,'id' => $post->id])}}" class="modify-link"><i class="fa fa-pencil fa-2x"></i>MODIFIER</a>
-
+                 <p class="divizeur"></p>
              @endforeach
                 </div>
             </div>
         </div>
 	</div>
-
 </div>
+
 
 
 @endsection
