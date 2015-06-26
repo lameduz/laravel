@@ -3,12 +3,12 @@
 @section('content')
 
     <div class="col-md-3 edit-blog-sidebar">
-        <h1>{{$blogs->title}}</h1>
+        <h1>{{$blog->title}}</h1>
         <div class="blog-thumbnail">
-            <img src="{{asset($blogs->image)}}" class="">
+            <img src="{{asset($blog->image)}}" class="">
         </div>
         <div id="blog-description" class="well well-lg blog-description" contenteditable="true">
-            {{$blogs->description}}
+            {{$blog->description}}
         </div>
         <div class="edit-tools" style="display: block;">
             <button class="edit-profile-confirm">Modifier</button>
@@ -16,7 +16,7 @@
         </div>
         <h3>Infos du blog</h3>
         <div class="bloginfos">
-            <i class="fa fa-calendar"></i><span class="bloginfos-created-at">créé le <strong>{{$blogs->created_at}}</strong></span><br/>
+            <i class="fa fa-calendar"></i><span class="bloginfos-created-at">créé le <strong>{{$blog->created_at}}</strong></span><br/>
             <i class="fa fa-pencil-square"></i><span class="bloginfos-articles"><strong>12</strong> articles</span><br/>
             <i class="fa fa-comment"></i><span class="bloginfos-commentaires"><strong>8</strong> commentaires</span><br/>
             <i class="fa fa-plus"></i><span class="bloginfos-abonnés"><strong>1 289 345</strong> abonnés</span><br/>
@@ -33,7 +33,7 @@
         </a>
 	</div>
     <div class="col-md-3">
-        <a href="{{route('blog.settings',['id' => $blogs->id])}}">
+        <a href="{{route('blog.settings',['id' => $blog->id])}}">
             <button type="button" class="btn btn-default blog-settings-button">
                 <i class="fa fa-cog"></i><span>Modifier le blog</span>
             </button>
@@ -50,14 +50,14 @@
 
                 </div>
 
-             @foreach($blogs->posts as $post)
+             @foreach($blog->posts as $post)
                      <div class="media">
                          <div class="media-left myarticles-thumbnails">
                                  <img src="{{asset($post->image)}}" alt="...">
 
                          </div>
                          <div class="media-body">
-                             <h4 class="media-heading"><a href="{{route('blog.article',['blogid' => $blogs->id,'postid' => $post->id])}}">{{$post->title}}</a></h4>
+                             <h4 class="media-heading"><a href="{{route('blog.article',['blogid' => $blog->id,'postid' => $post->id])}}">{{$post->title}}</a></h4>
                              {!! $post->body !!}
                          </div>
                      </div>
