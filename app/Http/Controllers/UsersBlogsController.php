@@ -18,7 +18,7 @@ class UsersBlogsController extends Controller {
 	public function index($route)
 	{
 
-		return view('userblog.index')->with(Blog::whereSubdomain($route)->get());
+		return view('userblog.index')->with('blog',Blog::whereSubdomain($route)->first());
 	}
 
     public function blogDashBoard($id)

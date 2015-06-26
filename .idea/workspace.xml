@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="20533918-81e4-43d9-9acb-0ca85f900a3e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/UsersBlogsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsersBlogsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="laravel.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -105,7 +106,7 @@
             <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersBlogsController.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.4" vertical-offset="210" max-vertical-offset="1560">
-                  <caret line="20" column="79" selection-start-line="20" selection-start-column="79" selection-end-line="20" selection-end-column="79" />
+                  <caret line="20" column="87" selection-start-line="20" selection-start-column="87" selection-end-line="20" selection-end-column="87" />
                   <folding>
                     <element signature="e#39#52#0#PHP" expanded="true" />
                   </folding>
@@ -1158,7 +1159,7 @@
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersBlogsController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4" vertical-offset="210" max-vertical-offset="1560">
-          <caret line="20" column="79" selection-start-line="20" selection-start-column="79" selection-end-line="20" selection-end-column="79" />
+          <caret line="20" column="87" selection-start-line="20" selection-start-column="87" selection-end-line="20" selection-end-column="87" />
           <folding>
             <element signature="e#39#52#0#PHP" expanded="true" />
           </folding>
