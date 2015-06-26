@@ -11,6 +11,8 @@ return array(
     'AddCommentsTable' => $baseDir . '/database/migrations/2015_06_09_122953_AddCommentsTable.php',
     'AddFKToBlogTable' => $baseDir . '/database/migrations/2015_06_04_214009_AddFKToBlogTable.php',
     'AddFKToPostsTable' => $baseDir . '/database/migrations/2015_06_09_121813_AddFKToPostsTable.php',
+    'AddFkToCommentsTable' => $baseDir . '/database/migrations/2015_06_26_083706_AddFkToCommentsTable.php',
+    'AddFriendsTable' => $baseDir . '/database/migrations/2015_06_26_002755_AddFriendsTable.php',
     'AddImageColumnToBlog' => $baseDir . '/database/migrations/2015_06_25_235734_AddImageColumnToBlog.php',
     'AddProfileTable' => $baseDir . '/database/migrations/2015_06_09_122257_AddProfileTable.php',
     'AddSexeToProfileTable' => $baseDir . '/database/migrations/2015_06_18_214200_AddSexeToProfileTable.php',

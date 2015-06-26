@@ -57,7 +57,7 @@
 
                          </div>
                          <div class="media-body">
-                             <h4 class="media-heading">{{$post->title}}</h4>
+                             <h4 class="media-heading"><a href="{{route('blog.article',['blogid' => $blogs->id,'postid' => $post->id])}}">{{$post->title}}</a></h4>
                              {!! $post->body !!}
                          </div>
                      </div>

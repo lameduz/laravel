@@ -17,8 +17,7 @@ class UsersBlogsController extends Controller {
 	 */
 	public function index()
 	{
-		return "salut le blog trop cool index";
-		//return view('userblog.index');
+		return view('userblog.index');
 	}
 
     public function blogDashBoard($id)

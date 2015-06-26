@@ -68,10 +68,17 @@ class BlogsArticlesController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show($blogid,$postid)
 	{
-		//
+        $post = Blog::find($blogid)->posts()->whereId($postid)->first();
+		return view('articles.show')->with('post', $post);
 	}
+
+    public function comment($blogid,$postid, Request $request)
+    {
+        $blog = Blog::find($blogid)->posts()->whereId($postid)->first();
+        dd($blog);
+    }
 
 	/**
 	 * Show the form for editing the specified resource.

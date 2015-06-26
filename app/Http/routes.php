@@ -17,7 +17,7 @@ Route::group(['domain' => '{blogname}.bloggus.dev'], function()
     Route::group(['middleware' => 'blogexist'],function()
     {
         /* Route pour accéder à un blog */
-        Route::get('/', 'UsersBlogsController@index');
+        Route::get('/', ['uses' => 'UsersBlogsController@index','as' => 'user.blog.index']);
 
     });
 
@@ -58,5 +58,8 @@ Route::controllers([
 /* Route pour accéder au dashboard d'un blog */
 Route::get('blog/{id}', ['uses' => 'UsersBlogsController@blogDashBoard','as' => 'blog.dashboard' ]);
 Route::get('blog/{id}/settings', ['uses' => 'UsersBlogsController@settings','as' => 'blog.settings']);
+Route::get('blog/{id}/article/{postid}', ['uses' => 'BlogsArticlesController@show','as' => 'blog.article']);
+Route::post('blog/{id}/article/{postid}/comment', ['uses' => 'BlogsArticlesController@comment','as' => 'blog.article.comment']);
+
 
 
